@@ -1,4 +1,3 @@
-
 #### 3. Longest Substring Without Repeating Characters
 
 - 先處理字串長度如果小於2的情況
