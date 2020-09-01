@@ -7,7 +7,7 @@ Reverse bits of a given 32 bits unsigned integer.
 ```c
 uint32_t reverseBits(uint32_t n) {
     uint32_t res = 0;
-    
+
     for (uint32_t i = 0; i < 32; ++i)
         res |= (((n & (1u << i)) >> i) << (31u - i));
     return res;
