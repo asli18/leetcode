@@ -1,4 +1,9 @@
 #### 4. Median of Two Sorted Arrays
+Given two sorted arrays nums1 and nums2 of size m and n respectively.
+Return the median of the two sorted arrays.
+<p align="center">
+    <img src="https://github.com/asli18/leetcode/blob/master/004_example.png?raw=true" alt="004_example"/>
+</p>
 - 兩個排列好的 array, 只要找到兩個長度相加後中間的 index 就是中間值
     - 注意總長度是奇數 or 偶數, 回傳結果不同
 

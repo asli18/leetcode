@@ -1,4 +1,12 @@
 #### 2. Add Two Numbers
+You are given two **non-empty linked lists** representing two **non-negative integers**.
+The digits are stored in reverse order and each of their nodes contain a single digit.
+Add the two numbers and return it as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+<p align="center">
+    <img src="https://github.com/asli18/leetcode/blob/master/002_example.png?raw=true" alt="002_example"/>
+</p>
 
 - 注意 list 是否為 NULL
 - 兩個 list 開始相加，紀錄進位
@@ -17,14 +25,13 @@
 
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
 {
-
     unsigned int sum = 0, c = 0;
     struct ListNode *head = NULL;
     struct ListNode *cur = NULL;
 
 
     while ((l1 != NULL) || (l2 != NULL) || c) {
-        struct ListNode *new = calloc(sizeof(struct ListNode), 1);
+        struct ListNode *new = malloc(sizeof(struct ListNode));
 
         sum = c;
 
@@ -42,23 +49,19 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
         new->val = sum;
         new->next = NULL;
 
-        if (cur == NULL) {
-            head = new;
-            cur = head;
-        } else {
+        if (cur != NULL) {
             cur->next = new;
             cur = cur->next;
+        } else {
+            head = new;
+            cur = head;
         }
     }
-
     return head;
 }
 ```
-
-
-
+<div style="page-break-after: always;"></div>
 - 省記憶體的方式
-
 ```c
 /**
  * Definition for singly-linked list.
@@ -108,7 +111,6 @@ static struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
         p->next = NULL;
         prev->next = p;
     }
-
     return dummy.next;
 }
 ```
