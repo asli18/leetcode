@@ -8,8 +8,7 @@ Return the median of the two sorted arrays.
     - 注意總長度是奇數 or 偶數, 回傳結果不同
 
 ```c
-double findMedianSortedArrays(int* nums1, int nums1Size,
-                              int* nums2, int nums2Size)
+double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Size)
 {
     const bool odd = (nums1Size + nums2Size) & 1;
     const int med_idx = (nums1Size + nums2Size) >> 1;
@@ -32,10 +31,10 @@ double findMedianSortedArrays(int* nums1, int nums1Size,
             data = *nums2++;
         }
 
-        sum[(i != med_idx)] = data;
+        sum[(i == med_idx)] = data;
     }
 
-    return (odd) ? sum[0] : ((sum[0] + sum[1]) / 2);
+    return (odd) ? sum[1] : ((sum[0] + sum[1]) / 2);
 }
 ```
 
