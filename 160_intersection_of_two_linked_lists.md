@@ -1,7 +1,7 @@
 #### 160. Intersection of Two Linked Lists
 Write a program to find the node at which the intersection of two singly linked lists begins.
 <p align="center">
-    <img src="https://github.com/asli18/leetcode/blob/master/160_example.png?raw=true" alt="160_example"/>
+    <img src="https://github.com/asli18/leetcode/blob/master/160_example.png?raw=true" alt="160_example" width="440" height="280"/>
 </p>
 - 尋找交錯點，沒找到回傳 NULL
     - Example
@@ -28,4 +28,3 @@ struct ListNode *getIntersectionNode(struct ListNode *headA,
     return p1;
 }
 ```
-

@@ -1,7 +1,6 @@
 #### 24. Swap Nodes in Pairs
 Given a linked list, swap every two adjacent nodes and return its head.
 You may not modify the values in the list's nodes, only nodes itself may be changed.
-
 <p align="center">
     <img src="https://github.com/asli18/leetcode/blob/master/024_example.png?raw=true" alt="024_example"/>
 </p>

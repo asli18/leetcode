@@ -7,11 +7,10 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 <p align="center">
     <img src="https://github.com/asli18/leetcode/blob/master/002_example.png?raw=true" alt="002_example"/>
 </p>
-
 - 注意 list 是否為 NULL
 - 兩個 list 開始相加，紀錄進位
 - 要更省記憶體的話就是要沿用原本 `l1 or l2` 的空間，只有最後的進位才新增新空間
-
+<div style="page-break-after: always;"></div>
 ```c
 /**
  * Definition for singly-linked list.
@@ -20,9 +19,6 @@ You may assume the two numbers do not contain any leading zero, except the numbe
  *     struct ListNode *next;
  * };
  */
-#include <stdio.h>
-#include <stdlib.h>
-
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
 {
     unsigned int sum = 0, c = 0;
@@ -70,9 +66,6 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
  *     struct ListNode *next;
  * };
  */
-#include <stdio.h>
-#include <stdlib.h>
-
 static struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
 {
     int carry = 0;

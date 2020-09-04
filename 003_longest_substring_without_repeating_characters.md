@@ -7,7 +7,7 @@ Given a string, find the length of the **longest substring** without repeating c
 - 先處理字串長度如果小於2的情況
 - 接下來從字串的第2個 index 開始往前比對字串 `(s)`
     - 如果比到重複的字元`(chk)`，就跳過，下次從重複的 index 繼續比對 `(head)`
-
+<div style="page-break-after: always;"></div>
 ```c
 #include <stdio.h>
 #include <stdlib.h>

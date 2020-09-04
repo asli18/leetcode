@@ -6,7 +6,7 @@ Return the median of the two sorted arrays.
 </p>
 - 兩個排列好的 array, 只要找到兩個長度相加後中間的 index 就是中間值
     - 注意總長度是奇數 or 偶數, 回傳結果不同
-
+<div style="page-break-after: always;"></div>
 ```c
 double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Size)
 {
