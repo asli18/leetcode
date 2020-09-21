@@ -3,10 +3,12 @@ Write a program to find the node at which the intersection of two singly linked 
 <p align="center">
     <img src="https://github.com/asli18/leetcode/blob/master/160_example.png?raw=true" alt="160_example" width="440" height="280"/>
 </p>
+
 - 尋找交錯點，沒找到回傳 NULL
     - Example
         - A: `1 9 1 2 4 N 3 *2* 4`
         - B: `3 2 4 N 1 9 1 *2* 4`
+
 ```c
 /**
  * Definition for singly-linked list.
