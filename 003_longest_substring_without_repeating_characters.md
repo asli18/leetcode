@@ -4,6 +4,7 @@ Given a string, find the length of the **longest substring** without repeating c
 <p align="center">
     <img src="https://github.com/asli18/leetcode/blob/master/003_example.png?raw=true" alt="003_example"/>
 </p>
+
 - 先處理字串長度如果小於2的情況
 - 接下來從字串的第2個 index 開始往前比對字串 `(s)`
     - 如果比到重複的字元`(chk)`，就跳過，下次從重複的 index 繼續比對 `(head)`
