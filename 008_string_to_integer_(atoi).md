@@ -12,10 +12,12 @@ If no valid conversion could be performed, a zero value is returned.
 <p align="center">
     <img src="https://github.com/asli18/leetcode/blob/master/008_example.png?raw=true" alt="008_example"/>
 </p>
+
 - 先判斷是否有空白, '-' or '+', 其他除了數字以外的都是無效字元，返回 0
 - 每次累加確定是否已經溢位
 - 負值取2的補數
 <div style="page-break-after: always;"></div>
+
 ```c
 int myAtoi(char *str)
 {
