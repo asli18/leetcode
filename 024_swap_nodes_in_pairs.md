@@ -4,7 +4,9 @@ You may not modify the values in the list's nodes, only nodes itself may be chan
 <p align="center">
     <img src="https://github.com/asli18/leetcode/blob/master/024_example.png?raw=true" alt="024_example"/>
 </p>
+
 - pointer 兩兩交換，存前一組的結尾`(prev)`，再接到當下這組
+
 ```c
 /**
  * Definition for singly-linked list.
