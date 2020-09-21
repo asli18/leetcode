@@ -3,8 +3,10 @@ Given a linked list, remove the n-th node from the end of list and return its he
 <p align="center">
     <img src="https://github.com/asli18/leetcode/blob/master/019_example.png?raw=true" alt="019_example"/>
 </p>
+
 - 兩個pointer(cur & pn)相差n個長度，一起往前移動，當 pn到達結尾，cur->next就是要remove的node
 <div style="page-break-after: always;"></div>
+
 ```c
 /**
  * Definition for singly-linked list.
