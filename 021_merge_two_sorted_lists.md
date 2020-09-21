@@ -3,8 +3,10 @@ Merge two sorted linked lists and return it as a new sorted list. The new list s
 <p align="center">
     <img src="https://github.com/asli18/leetcode/blob/master/021_example.png?raw=true" alt="021_example"/>
 </p>
+
 - 比大小，然後延用原本的 list 實體
 <div style="page-break-after: always;"></div>
+
 ```c
 /**
  * Definition for singly-linked list.
