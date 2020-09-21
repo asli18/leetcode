@@ -8,8 +8,10 @@ Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one s
 <p align="center">
     <img src="https://github.com/asli18/leetcode/blob/master/088_example.png?raw=true" alt="088_example"/>
 </p>
+
 - 從 nums1 的最後面多的空間開始擺最大值，就不用顧慮會蓋掉原本值
 <div style="page-break-after: always;"></div>
+
 ```c
 void merge(int* nums1, int nums1Size, int m,
            int* nums2, int nums2Size, int n)
