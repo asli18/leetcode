@@ -3,6 +3,7 @@ Given a 32-bit signed integer, reverse digits of an integer.
 <p align="center">
     <img src="https://github.com/asli18/leetcode/blob/master/007_example.png?raw=true" alt="007_example"/>
 </p>
+
 ```c
 #include <limits.h>
 
