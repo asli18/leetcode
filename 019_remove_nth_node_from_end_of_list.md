@@ -18,29 +18,26 @@ Given a linked list, remove the n-th node from the end of list and return its he
 
 struct ListNode* removeNthFromEnd(struct ListNode* head, int n)
 {
+    struct ListNode *cur = head;
+    struct ListNode *pn = head;
+    
     if (head->next == NULL)
         return NULL;
-
-    struct ListNode *cur = head, *pn = head;
-    int len = 0;
-
-    do {
+    
+    for (int i = n; i != 0; --i)
         pn = pn->next;
-        len += 1;
-    } while (len < n);
-
-    while (pn != NULL) {
-        pn = pn->next;
-        len += 1;
-        if (pn != NULL)
-            cur = cur->next;
-    }
-
-    if (len == n) {
+    
+    if (pn == NULL) {
         head = head->next;
-    } else {
-        cur->next = cur->next->next;
+        return head;
     }
+    
+    while (pn->next != NULL) {
+        pn = pn->next;
+        cur = cur->next;
+    }
+    
+    cur->next = cur->next->next;
 
     return head;
 }
