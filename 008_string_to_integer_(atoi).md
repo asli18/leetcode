@@ -34,10 +34,7 @@ int myAtoi(char *str)
         str += 1;
     }
 
-    while (*str != 0) {
-        if ((*str > '9') || (*str < '0'))
-            break;
-
+    while ((*str >= '0') && (*str <= '9')) {
         if ((res = ((res * 10) + (*str++ - '0'))) > INT_MAX)
             return (neg) ? INT_MIN : INT_MAX;
     }
