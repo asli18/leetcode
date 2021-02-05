@@ -5,6 +5,9 @@ Given a linked list, remove the n-th node from the end of list and return its he
 </p>
 
 - 兩個pointer(cur & pn)相差n個長度，一起往前移動，當 pn到達結尾，cur->next就是要remove的node
+- 要注意兩種情境
+    - [1, 2], n = 1
+    - [1, 2], n = 2
 <div style="page-break-after: always;"></div>
 
 ```c
@@ -27,7 +30,7 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n)
     for (int i = n; i != 0; --i)
         pn = pn->next;
     
-    if (pn == NULL) {
+    if (pn == NULL) { /* len of list == n */
         head = head->next;
         return head;
     }
