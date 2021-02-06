@@ -18,25 +18,26 @@ You may not modify the values in the list's nodes, only nodes itself may be chan
 
 struct ListNode* swapPairs(struct ListNode* head)
 {
+    struct ListNode *cur = head, *prev = NULL, *next = NULL;
+
     if (head == NULL)
         return NULL;
-    struct ListNode *cur = head;
-    struct ListNode *prev = head, *next;
+    
+    if (head->next != NULL)
+        head = head->next;
 
-    if (cur->next != NULL)
-        head = cur->next;
-
-    while (cur != NULL && cur->next != NULL) {
-        prev->next = cur->next;
+    while ((cur != NULL) && (cur->next != NULL)) {
+        if (prev != NULL)
+            prev->next = cur->next;
 
         next = cur->next->next;
         cur->next->next = cur;
         cur->next = next;
-
+    
         prev = cur;
         cur = cur->next;
     }
-
+    
     return head;
 }
 ```
