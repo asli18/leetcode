@@ -16,27 +16,31 @@ Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one s
 void merge(int* nums1, int nums1Size, int m,
            int* nums2, int nums2Size, int n)
 {
-    int len = m + n;
+    if (nums1Size == m)
+        return;
+    
     int *data = nums1 + nums1Size - 1;
+    int *n1_end;
+    int *n2_end;
+    
+    if (m)
+        n1_end = nums1 + m - 1;
+    if (n)
+        n2_end = nums2 + n - 1;
+    
+    while (data >= nums1) {
+        if ((n1_end >= nums1) && (n2_end >= nums2)) {
+            if (*n1_end > *n2_end)
+                *data = *n1_end--;
+            else
+                *data = *n2_end--;
 
-    nums1 += m - 1;
-    nums2 += n - 1;
-
-    while (len--) {
-        if (m && n) {
-            if (*nums1 > *nums2) {
-                *data = *nums1--;
-                m--;
-            } else {
-                *data = *nums2--;
-                n--;
-            }
-        } else if (m) {
-            *data = *nums1--;
+        } else if (n1_end >= nums1) {
+            *data = *n1_end--;
         } else {
-            *data = *nums2--;
+            *data = *n2_end--;
         }
-        data -=1;
+        *data--;
     }
 }
 ```
